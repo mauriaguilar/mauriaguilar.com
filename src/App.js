@@ -3,9 +3,6 @@ import './App.css';
 
 class App extends Component {
   render() {
-    // const [showStudies, setShowStudies] = useState(true);
-    // const [showPorfolio, setPortfolio] = useState(False);
-    // const [showSkills, setSkills] = useState(False);
 
     function activateStudies(){
       console.log('You clicked submit.');
