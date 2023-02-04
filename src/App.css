@@ -94,6 +94,7 @@ a {
   width: 100px;
   bottom: 100px;
   color: #222;
+  text-shadow: 1px 1px 10px yellowgreen;
 }
 
 .button-link{
