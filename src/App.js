@@ -46,16 +46,16 @@ class App extends Component {
                   <small>CoderHouse (07/2021 - 09/2021)</small>
               </li>
               <li>
+              <li>
+                  English Level 3 & 4<br/>
+                  <small>GAPS Academy (2020, 2021, 2022)</small>
+              </li>
                   IT Essentials<br/>
                   <small>Cisco Networking Academy (11/2011)</small>
               </li>
               <li>
                   Computer repairer<br/>
                   <small>ICIR Institute (09/2005)</small>
-              </li>
-              <li>
-                  English Level 3 & 4<br/>
-                  <small>GAPS Academy (2020, 2021, 2022)</small>
               </li>
             </ul>
           </div>
@@ -66,7 +66,7 @@ class App extends Component {
           <div className='App-description'>
             <ul>
               <li>Intel Transportation<br/>
-                  <small>OpenVINO framework for deep learning models, Python, Docker, DockerCompose, JQuery, Flask, ThingsBoard for IoT, AWS IoT, AWS ECR, AWS EC2, GitHub, English meetings - (2020-2022)</small>
+                  <small>OpenVINO framework for deep learning models, Python, Docker, DockerCompose, JQuery, Flask, ThingsBoard for IoT, AWS IoT, AWS ECR, AWS EC2, Boto3, SQLite, GitHub, English meetings - (2020-2022)</small>
                   <div className='cap'>
                     <iframe width="90%" height="400px" src="https://www.youtube.com/embed/Ru51DELfc-Q" title="New OpenVINO Solution: Edge Insights For Fleet | Edge Innovation Series for Developers" frame-border="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></iframe>
                   </div>
@@ -90,7 +90,7 @@ class App extends Component {
                   </div>
               </li>
               <li>Business App<br/>
-                  <small>AngularJs, HTML, CSS - (2018)</small>
+                  <small>AngularJs, HTML, CSS, ExpressJs, SQLite- (2018)</small>
                   <div className='cap'>
                     <img src="bussinessapp.png" alt="Business App Screenshot"></img>
                   </div>
@@ -110,7 +110,7 @@ class App extends Component {
               </li>
               <li>
                 Cloud: <br/>
-                <small>AWS EC2, AWS ECR, AWS IoT</small>
+                <small>Boto3, AWS EC2, AWS ECR, AWS IoT</small>
               </li>
               <li>
                 Tools: <br/>
