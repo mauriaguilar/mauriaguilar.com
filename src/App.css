@@ -86,3 +86,25 @@ a {
   height: 40%;
   max-width: 90%;
 }
+
+.SideButtons {
+  position: fixed;
+  bottom: 0px;
+  right: 10px;
+  width: 100px;
+  bottom: 100px;
+  color: #222;
+}
+
+.button-link{
+  color: black !important;
+  position: relative;
+  text-decoration: none;
+  font-weight: normal !important;
+  font-size: 1rem;
+}
+
+.button-link a{
+  color: inherit;
+  list-style: none;
+}
