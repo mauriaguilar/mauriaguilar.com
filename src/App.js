@@ -118,7 +118,7 @@ class App extends Component {
               </li>
               <li>
                 Frontend: <br/>
-                <small>ReactJs, NextJs</small>
+                <small>ReactJs</small>
               </li>
               <li>
                 Test: <br/>
