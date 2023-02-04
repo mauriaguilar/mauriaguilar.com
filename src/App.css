@@ -29,7 +29,7 @@ body {
 
 .App-navbar {
   color: #f0f2f5;
-  position: absolute;
+  position: fixed;
   bottom: 0px;
   left: 0px;
 }
@@ -61,5 +61,16 @@ a {
   padding: 0;
 }
 
-.AppLateral {
+#studies {
+  padding: 0;
+}
+
+.row, ul, li, .App-Lateral, div {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+* {
+  list-style: none;
+  text-decoration: none;
 }
