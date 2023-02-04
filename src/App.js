@@ -6,22 +6,22 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      showStudies: true,
-      showPortfolio: false,
+      showStudies: false,
+      showExperience: true,
       showSkills: false
     };
   };
 
   activateStudies = () => {
-    this.setState({ showStudies: true, showPortfolio: false, showSkills: false })
+    this.setState({ showStudies: true, showExperience: false, showSkills: false })
   }
   
-  activatePortfolio = () => {
-    this.setState({ showStudies: false, showPortfolio: true, showSkills: false })
+  activateExperience = () => {
+    this.setState({ showStudies: false, showExperience: true, showSkills: false })
   }
 
   activateSkills = () => {
-    this.setState({ showStudies: false, showPortfolio: false, showSkills: true })
+    this.setState({ showStudies: false, showExperience: false, showSkills: true })
   }
 
   render() {
@@ -61,29 +61,53 @@ class App extends Component {
           </div>
         </div>
 
-        <div className={"col " + (this.state.showPortfolio ? 'd-block' : 'd-none')} id="studies">
-          <div className='App-title'>Portfolio:</div>
+        <div className={"col " + (this.state.showExperience ? 'd-block' : 'd-none')} id="experience">
+          <div className='App-title'>Work Experience:</div>
           <div className='App-description'>
             <ul>
-              <li>AppNegocios<br/>
-                  <small>Universidad Nacional de Córdoba (2008 - 2022)</small>
+              <li>Intel Transportation<br/>
+                  <small>OpenVINO framework for deep learning models, Python, Docker, DockerCompose, JQuery, Flask, ThingsBoard for IoT, AWS IoT, AWS ECR, AWS EC2, GitHub, English meetings - (2020-2022)</small>
               </li>
-              <li>ThingsBoard<br/>
-                  <small>CoderHouse (07/2021 - 09/2021)</small>
+              <li>Personal App & Web<br/>
+                  <small>Java, HTML, CSS, JQuery - (2020)</small>
+              </li>
+              <li>ReactJs Project<br/>
+                  <small>ReactJs, Firebase - (2021)</small>
+              </li>
+              <li>Thesis Project<br/>
+                  <small>Python - (2021)</small>
+              </li>
+              <li>AppNegocios)<br/>
+                  <small>AngularJs, HTML, CSS - (2018</small>
               </li>
             </ul>
           </div>
         </div>
 
-        <div className={"col " + (this.state.showSkills ? 'd-block' : 'd-none')} id="studies">
+        <div className={"col " + (this.state.showSkills ? 'd-block' : 'd-none')} id="skills">
           <div className='App-title'>Skills:</div>
           <div className='App-description'>
             <ul>
-              <li>Backend: Python, Flask, NodeJs, ExpressJs</li>
-              <li>Cloud: AWS EC2, AWS ECR, AWS IoT</li>
-              <li>Tools: Git, GitHub, Docker, Linux, Makefile, Bash</li>
-              <li>Frontend: ReactJs, NextJs</li>
-              <li>Test: PyTest</li>
+              <li>
+                Backend: <br/>
+                <small>Python, Flask, NodeJs, ExpressJs</small>
+              </li>
+              <li>
+                Cloud: <br/>
+                <small>AWS EC2, AWS ECR, AWS IoT</small>
+              </li>
+              <li>
+                Tools: <br/>
+                <small>Git, GitHub, Docker, Linux, Makefile, Bash</small>
+              </li>
+              <li>
+                Frontend: <br/>
+                <small>ReactJs, NextJs</small>
+              </li>
+              <li>
+                Test: <br/>
+                <small>PyTest</small>
+              </li>
             </ul>
           </div>
         </div>
@@ -113,8 +137,8 @@ class App extends Component {
                     <div className="col item text-center" onClick={this.activateStudies}>
                       <a className="link w-100 active" href="#">Studies</a>
                     </div>
-                    <div className="col item" onClick={this.activatePortfolio}>
-                      <a className="link w-100" href="#">Portfolio</a>
+                    <div className="col item" onClick={this.activateExperience}>
+                      <a className="link w-100" href="#">Work Experience</a>
                     </div>
                     <div className="col item" onClick={this.activateSkills}>
                       <a className="link w-100" href="#">Skills</a>

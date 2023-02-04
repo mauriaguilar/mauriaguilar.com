@@ -6,9 +6,6 @@ body {
   text-align: center;
 }
 
-.App-content {
-}
-
 .App-title {
   background-color: #222;
   color: #f0f2f5;
@@ -16,11 +13,12 @@ body {
 
 .App-description {
   background-color: aliceblue;
-  font-size: 1rem;
+  font-size: 1.78rem;
 }
 
 .App-description small{
-  font-size: 0.7rem;
+  font-size: 1.1rem;
+  vertical-align: top;
 }
 
 .App-domain {
@@ -36,7 +34,6 @@ body {
 
 .menu {
   background-color: #222;
-  text-align: center;
 }
 
 .link {
@@ -47,10 +44,11 @@ body {
 
 .item {
   background-color: yellowgreen;
-  margin: 0.05em;
+  margin: 0.5rem;
   list-style: none;
   display: flex;
   text-align: center;
+  border: 1px solid rgb(187, 207, 146);
 }
 
 a {
@@ -61,13 +59,18 @@ a {
   padding: 0;
 }
 
-#studies {
-  padding: 0;
-}
-
 .row, ul, li, .App-Lateral, div {
   padding: 0 !important;
   margin: 0 !important;
+}
+
+#skills .App-description{
+  font-size: 1.942rem;
+}
+
+#skills .App-description small{
+  font-size: 1.2rem;
+  vertical-align: 0%;
 }
 
 * {
