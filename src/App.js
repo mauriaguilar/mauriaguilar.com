@@ -6,8 +6,8 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      showStudies: false,
-      showExperience: true,
+      showStudies: true,
+      showExperience: false,
       showSkills: false
     };
   };
