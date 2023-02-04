@@ -36,7 +36,7 @@ class App extends Component {
         <div className={"col " + (this.state.showStudies ? 'd-block' : 'd-none')} id="studies">
           <div className='App-title'>Studies:</div>
           <div className='App-description'>
-            <ul>
+            <ul className="mt-2">
               <li>
                   <span className="item-info-c1">Computer Engineer</span><br/>
                   <small>Universidad Nacional de Córdoba (2008 - 2022)</small>
@@ -64,7 +64,7 @@ class App extends Component {
         <div className={"col " + (this.state.showExperience ? 'd-block' : 'd-none')} id="experience">
           <div className='App-title'>Work Experience:</div>
           <div className='App-description'>
-            <ul>
+            <ul className="mt-2">
               <li>
                   <span className="item-info-c2">Intel Transportation</span><br/>
                   <small>OpenVINO framework for deep learning models, Python, Docker, DockerCompose, JQuery, Flask, ThingsBoard for IoT, AWS IoT, AWS ECR, AWS EC2, Boto3, SQLite, GitHub, English meetings - (2020-2022)</small>
@@ -108,7 +108,7 @@ class App extends Component {
         <div className={"col " + (this.state.showSkills ? 'd-block' : 'd-none')} id="skills">
           <div className='App-title'>Skills:</div>
           <div className='App-description'>
-            <ul>
+            <ul className="mt-2">
               <li>
                 <span className="item-info-c3">Backend</span><br/>
                 <small>Python, Flask, NodeJs, ExpressJs</small>

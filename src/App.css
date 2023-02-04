@@ -1,3 +1,13 @@
+* {
+  list-style: none;
+  text-decoration: none;
+}
+
+.row, ul, li, .App-Lateral, div, a {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
 body {
   background-color: #f0f2f5;
   font-family: "Lato", 'Open Sans', sans-serif !important;
@@ -18,14 +28,20 @@ body {
 }
 
 .App-description .item-info-c1{
+  border-radius: 0.5rem;
+  padding: 0.2rem;
   background-color: tomato;
 }
 
 .App-description .item-info-c2{
+  border-radius: 0.5rem;
+  padding: 0.2rem;
   background-color: teal;
 }
 
 .App-description .item-info-c3{
+  border-radius: 0.5rem;
+  padding: 0.2rem;
   background-color: turquoise;
 }
 
@@ -74,13 +90,6 @@ a {
   color: #f0f2f5 !important;  
   font-weight: bold !important;
   text-align: center;
-  margin: 0;
-  padding: 0;
-}
-
-.row, ul, li, .App-Lateral, div {
-  padding: 0 !important;
-  margin: 0 !important;
 }
 
 #skills .App-description{
@@ -92,10 +101,6 @@ a {
   vertical-align: 0%;
 }
 
-* {
-  list-style: none;
-  text-decoration: none;
-}
 
 .cap{
   overflow: hidden;
