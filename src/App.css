@@ -1,5 +1,6 @@
 body {
   background-color: #f0f2f5;
+  font-family: "Lato", 'Open Sans', sans-serif !important;
 }
 
 .App {
@@ -95,6 +96,7 @@ a {
   bottom: 100px;
   color: #222;
   text-shadow: 1px 1px 10px yellowgreen;
+  font-family: sans-serif;
 }
 
 .button-link{
