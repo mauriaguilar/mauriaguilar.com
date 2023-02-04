@@ -67,19 +67,35 @@ class App extends Component {
             <ul>
               <li>Intel Transportation<br/>
                   <small>OpenVINO framework for deep learning models, Python, Docker, DockerCompose, JQuery, Flask, ThingsBoard for IoT, AWS IoT, AWS ECR, AWS EC2, GitHub, English meetings - (2020-2022)</small>
+                  <div className='cap'>
+                    <iframe width="90%" height="400px" src="https://www.youtube.com/embed/Ru51DELfc-Q" title="New OpenVINO Solution: Edge Insights For Fleet | Edge Innovation Series for Developers" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                  </div>
               </li>
-              <li>Personal App & Web<br/>
+              <li>Telecom Personal Mobile & Web Apps<br/>
                   <small>Java, HTML, CSS, JQuery - (2020)</small>
+                  <div className='cap'>
+                    <img src="personal.png"></img>
+                  </div>
               </li>
               <li>ReactJs Project<br/>
                   <small>ReactJs, Firebase - (2021)</small>
+                  <div className='cap'>
+                    <img src="https://github.com/mauriaguilar/tecnoshop-aguilar/raw/main/example_of_use.gif"></img>
+                  </div>
               </li>
               <li>Thesis Project<br/>
                   <small>Python - (2021)</small>
+                  <div className='cap'>
+                    <img src="thesis.png"></img>
+                  </div>
               </li>
-              <li>AppNegocios)<br/>
-                  <small>AngularJs, HTML, CSS - (2018</small>
+              <li>Business App<br/>
+                  <small>AngularJs, HTML, CSS - (2018)</small>
+                  <div className='cap'>
+                    <img src="bussinessapp.png"></img>
+                  </div>
               </li>
+              <br/><br/><br/>
             </ul>
           </div>
         </div>
