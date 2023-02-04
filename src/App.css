@@ -17,6 +17,18 @@ body {
   font-size: 1.78rem;
 }
 
+.App-description .item-info-c1{
+  background-color: tomato;
+}
+
+.App-description .item-info-c2{
+  background-color: teal;
+}
+
+.App-description .item-info-c3{
+  background-color: turquoise;
+}
+
 .App-description small{
   font-size: 1.1rem;
   vertical-align: top;

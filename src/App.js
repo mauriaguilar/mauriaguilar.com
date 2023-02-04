@@ -38,23 +38,23 @@ class App extends Component {
           <div className='App-description'>
             <ul>
               <li>
-                  Computer Engineer<br/>
+                  <span className="item-info-c1">Computer Engineer</span><br/>
                   <small>Universidad Nacional de Córdoba (2008 - 2022)</small>
               </li>
               <li>
-                  React Js<br/>
+                  <span className="item-info-c1">ReactJs</span><br/>
                   <small>CoderHouse (07/2021 - 09/2021)</small>
               </li>
               <li>
               <li>
-                  English Level 3 & 4<br/>
+                  <span className="item-info-c1">English Level 3 & 4</span><br/>
                   <small>GAPS Academy (2020, 2021, 2022)</small>
               </li>
-                  IT Essentials<br/>
+                  <span className="item-info-c1">IT Essentials</span><br/>
                   <small>Cisco Networking Academy (11/2011)</small>
               </li>
               <li>
-                  Computer repairer<br/>
+                  <span className="item-info-c1">Computer repairer</span><br/>
                   <small>ICIR Institute (09/2005)</small>
               </li>
             </ul>
@@ -65,31 +65,36 @@ class App extends Component {
           <div className='App-title'>Work Experience:</div>
           <div className='App-description'>
             <ul>
-              <li>Intel Transportation<br/>
+              <li>
+                  <span className="item-info-c2">Intel Transportation</span><br/>
                   <small>OpenVINO framework for deep learning models, Python, Docker, DockerCompose, JQuery, Flask, ThingsBoard for IoT, AWS IoT, AWS ECR, AWS EC2, Boto3, SQLite, GitHub, English meetings - (2020-2022)</small>
                   <div className='cap'>
                     <iframe width="90%" height="400px" src="https://www.youtube.com/embed/Ru51DELfc-Q" title="New OpenVINO Solution: Edge Insights For Fleet | Edge Innovation Series for Developers" frame-border="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></iframe>
                   </div>
               </li>
-              <li>Telecom Personal Mobile & Web Apps<br/>
+              <li>
+                  <span className="item-info-c2">Telecom Personal Mobile & Web Apps</span><br/>
                   <small>Java, HTML, CSS, JQuery - (2020)</small>
                   <div className='cap'>
                     <img src="personal.png" alt="Telecom App Screenshot"></img>
                   </div>
               </li>
-              <li>ReactJs Project<br/>
+              <li>
+                  <span className="item-info-c2">ReactJs Project</span><br/>
                   <small>ReactJs, Firebase - (2021)</small>
                   <div className='cap'>
                     <img src="https://github.com/mauriaguilar/tecnoshop-aguilar/raw/main/example_of_use.gif" alt="ReactJs Screenshot"></img>
                   </div>
               </li>
-              <li>Thesis Project<br/>
+              <li>
+                  <span className="item-info-c2">Thesis Project</span><br/>
                   <small>Python - (2021)</small>
                   <div className='cap'>
                     <img src="thesis.png" alt="Thesis Screenshot"></img>
                   </div>
               </li>
-              <li>Business App<br/>
+              <li>
+                  <span className="item-info-c2">Business App</span><br/>
                   <small>AngularJs, HTML, CSS, ExpressJs, SQLite- (2018)</small>
                   <div className='cap'>
                     <img src="bussinessapp.png" alt="Business App Screenshot"></img>
@@ -105,27 +110,27 @@ class App extends Component {
           <div className='App-description'>
             <ul>
               <li>
-                Backend: <br/>
+                <span className="item-info-c3">Backend</span><br/>
                 <small>Python, Flask, NodeJs, ExpressJs</small>
               </li>
               <li>
-                Cloud: <br/>
+                <span className="item-info-c3">Cloud</span><br/>
                 <small>Boto3, AWS EC2, AWS ECR, AWS IoT</small>
               </li>
               <li>
-                Tools: <br/>
+                <span className="item-info-c3">Tools</span><br/>
                 <small>Git, GitHub, Docker, Linux, Makefile, Bash</small>
               </li>
               <li>
-                Frontend: <br/>
+                <span className="item-info-c3">Frontend</span><br/>
                 <small>ReactJs</small>
               </li>
               <li>
-                Test: <br/>
+                <span className="item-info-c3">Test</span><br/>
                 <small>PyTest</small>
               </li>
               <li>
-                Languages: <br/>
+                <span className="item-info-c3">Languages</span><br/>
                 <small>English</small>
               </li>
             </ul>
