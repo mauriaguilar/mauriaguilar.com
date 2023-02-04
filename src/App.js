@@ -74,25 +74,25 @@ class App extends Component {
               <li>Telecom Personal Mobile & Web Apps<br/>
                   <small>Java, HTML, CSS, JQuery - (2020)</small>
                   <div className='cap'>
-                    <img src="personal.png"></img>
+                    <img src="personal.png" alt="Telecom App Screenshot"></img>
                   </div>
               </li>
               <li>ReactJs Project<br/>
                   <small>ReactJs, Firebase - (2021)</small>
                   <div className='cap'>
-                    <img src="https://github.com/mauriaguilar/tecnoshop-aguilar/raw/main/example_of_use.gif"></img>
+                    <img src="https://github.com/mauriaguilar/tecnoshop-aguilar/raw/main/example_of_use.gif" alt="ReactJs Screenshot"></img>
                   </div>
               </li>
               <li>Thesis Project<br/>
                   <small>Python - (2021)</small>
                   <div className='cap'>
-                    <img src="thesis.png"></img>
+                    <img src="thesis.png" alt="Thesis Screenshot"></img>
                   </div>
               </li>
               <li>Business App<br/>
                   <small>AngularJs, HTML, CSS - (2018)</small>
                   <div className='cap'>
-                    <img src="bussinessapp.png"></img>
+                    <img src="bussinessapp.png" alt="Business App Screenshot"></img>
                   </div>
               </li>
               <br/><br/><br/>
