@@ -46,10 +46,10 @@ class App extends Component {
                   <small>CoderHouse (07/2021 - 09/2021)</small>
               </li>
               <li>
-              <li>
                   <span className="item-info-c1">English Level 3 & 4</span><br/>
                   <small>GAPS Academy (2020, 2021, 2022)</small>
               </li>
+              <li>
                   <span className="item-info-c1">IT Essentials</span><br/>
                   <small>Cisco Networking Academy (11/2011)</small>
               </li>
@@ -57,7 +57,7 @@ class App extends Component {
                   <span className="item-info-c1">Computer repairer</span><br/>
                   <small>ICIR Institute (09/2005)</small>
               </li>
-            </ul>
+            </ul><br/><br/><br/>
           </div>
         </div>
 
@@ -101,7 +101,7 @@ class App extends Component {
                   </div>
               </li>
               <br/><br/><br/>
-            </ul>
+            </ul><br/><br/><br/>
           </div>
         </div>
 
@@ -133,7 +133,7 @@ class App extends Component {
                 <span className="item-info-c3">Languages</span><br/>
                 <small>English</small>
               </li>
-            </ul>
+            </ul><br/><br/><br/>
           </div>
         </div>
 
