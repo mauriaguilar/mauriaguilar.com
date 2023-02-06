@@ -30,19 +30,19 @@ body {
 .App-description .item-info-c1{
   border-radius: 0.5rem;
   padding: 0.2rem;
-  background-color: tomato;
+  background-color: #A3BCF9;
 }
 
 .App-description .item-info-c2{
   border-radius: 0.5rem;
   padding: 0.2rem;
-  background-color: teal;
+  background-color: #A3BCF9;
 }
 
 .App-description .item-info-c3{
   border-radius: 0.5rem;
   padding: 0.2rem;
-  background-color: turquoise;
+  background-color: #A3BCF9;
 }
 
 .App-description small{
