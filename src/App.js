@@ -131,7 +131,7 @@ class App extends Component {
               </li>
               <li>
                 <span className="item-info-c3">Languages</span><br/>
-                <small>English</small>
+                <small>English: Professional core competency</small>
               </li>
             </ul><br/><br/><br/>
           </div>
