@@ -6,22 +6,27 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      showStudies: true,
+      showAbout: true,
+      showStudies: false,
       showExperience: false,
       showSkills: false
     };
   };
 
+  activateAbout = () => {
+    this.setState({showAbout: true, showStudies: false, showExperience: false, showSkills: false })
+  }
+
   activateStudies = () => {
-    this.setState({ showStudies: true, showExperience: false, showSkills: false })
+    this.setState({showAbout: false, showStudies: true, showExperience: false, showSkills: false })
   }
   
   activateExperience = () => {
-    this.setState({ showStudies: false, showExperience: true, showSkills: false })
+    this.setState({showAbout: false,  showStudies: false, showExperience: true, showSkills: false })
   }
 
   activateSkills = () => {
-    this.setState({ showStudies: false, showExperience: false, showSkills: true })
+    this.setState({showAbout: false,  showStudies: false, showExperience: false, showSkills: true })
   }
 
   render() {
@@ -33,8 +38,28 @@ class App extends Component {
 
         <div className='col-xs-0 col-md-1 col-lg-2 App-Lateral'></div>
 
+        <div className={"col " + (this.state.showAbout ? 'd-block' : 'd-none')} id="studies">
+          <div className='App-title'>About me</div>
+          <div className='row App-description'>
+            <div className="col-3 mt-4 ms-5">
+              <img src="https://avatars.githubusercontent.com/u/68705306?v=4" height="200px" width="200px"></img>
+            </div>
+            <div className="col-6 mt-3">
+              Hola!, Soy Mauricio Aguilar<br/>
+              <span className="description d-block">
+                <p>Soy ingeniero en computación y desarrollador de software con experiencia trabajando
+                para empresas como McAfee, Telecom e Intel desde IncluIT.</p>
+                <p>Mis habilidades principales incluyen Python, Docker, ReactJs y Flutter.</p>
+                <p>Desarrollé un sistema de prevención de colisiones como parte de mi proyecto de tesis.</p>
+                <p>Me apasiona resolver problemas complejos y crear soluciones innovadoras en el desarrollo de software.</p>
+              </span>
+            </div>
+            <br/><br/><br/>
+          </div>
+        </div>
+
         <div className={"col " + (this.state.showStudies ? 'd-block' : 'd-none')} id="studies">
-          <div className='App-title'>Studies:</div>
+          <div className='App-title'>Studies</div>
           <div className='App-description'>
             <ul className="mt-2">
               <li>
@@ -62,7 +87,7 @@ class App extends Component {
         </div>
 
         <div className={"col " + (this.state.showExperience ? 'd-block' : 'd-none')} id="experience">
-          <div className='App-title'>Work Experience:</div>
+          <div className='App-title'>Work Experience</div>
           <div className='App-description'>
             <ul className="mt-2">
               <li>
@@ -106,7 +131,7 @@ class App extends Component {
         </div>
 
         <div className={"col " + (this.state.showSkills ? 'd-block' : 'd-none')} id="skills">
-          <div className='App-title'>Skills:</div>
+          <div className='App-title'>Skills</div>
           <div className='App-description'>
             <ul className="mt-2">
               <li>
@@ -159,6 +184,15 @@ class App extends Component {
                 </div>
 
                 <div className="row menu">
+                    <div className="col-2 item text-center bg-black" onClick={this.activateAbout}>
+                      <a className="link w-100 active" href="#">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-file-person" viewBox="0 0 16 16">
+                        <path d="M12 1a1 1 0 0 1 1 1v10.755S12 11 8 11s-5 1.755-5 1.755V2a1 1 0 0 1 1-1h8zM4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H4z"/>
+                        <path d="M8 10a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+                      </svg><br/>
+                        About me
+                      </a>
+                    </div>
                     <div className="col item text-center" onClick={this.activateStudies}>
                       <a className="link w-100 active" href="#">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-book" viewBox="0 0 16 16">
