@@ -154,7 +154,7 @@ class App extends Component {
 
                 <div className='row menu'>
                   <div className='col App-domain'>
-                    mauriaguilar.com
+                    mauriaguilar.com ||| aguilarmauri@gmail.com
                   </div>
                 </div>
 
