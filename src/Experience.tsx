@@ -46,7 +46,7 @@ const Experience = () => {
         {
             company: "ReactJs Project",
             description: "ReactJs, Firebase - (2021)",
-            media: <img src="https://github.com/mauriaguilar/tecnoshop-aguilar/raw/main/example_of_use.gif" alt="ReactJs Screenshot" width={533} height={300}></img>
+            media: <img src="tecnoshop.gif" alt="ReactJs Screenshot"></img>
         },
         {
             company: "Thesis Project",
