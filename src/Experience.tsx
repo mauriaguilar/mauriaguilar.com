@@ -4,7 +4,7 @@ const Experience = () => {
     const experiences = [
         {
             company: "Wazuh Inc",
-            description: "ReactJs, Python, Flask, AWS API Gateway, AWS Lambda, AWS Step Functions, AWS Amplify, AWS CloudWatch, AWS S3, AWS Cognito - (2023-present)",
+            description: "ReactJs, Python, Flask, AWS: API Gateway, Lambda, Step Functions, Amplify, CloudWatch, S3, Cognito - (2023-present)",
             media: <>
                 <img src="wazuh.png" alt="Wazuh Screenshot" className='mb-2'></img>
                 <img src="wazuh-web.png" alt="Wazuh Web Screenshot"></img>
