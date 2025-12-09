@@ -2,6 +2,8 @@
 nvm use 24
 npm run dev
 
+Updated Deployment on Vercel
+
 
 # React + TypeScript + Vite
 
