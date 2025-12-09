@@ -71,6 +71,17 @@ body {
   width: 2rem;
 }
 
+.menu a {
+    color: #f0f2f5;
+}
+
+.menu a:visited,
+.menu a:hover,
+.menu a:active,
+.menu a:focus {
+    color: #f0f2f5;
+}
+
 .link {
   text-decoration: none;
   padding-top: 1rem;
@@ -87,7 +98,6 @@ body {
 }
 
 a {
-  color: #f0f2f5 !important;  
   font-weight: bold !important;
   text-align: center;
 }

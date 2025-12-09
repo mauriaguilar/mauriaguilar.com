@@ -1,0 +1,44 @@
+/* reset básico */
+#work-experience {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column; /* una columna de items */
+  gap: 10px;
+}
+
+/* cada li ocupa 90% del ancho del ul */
+#work-experience li{
+    border: 1px solid rgb(14, 148, 201);
+    border-radius: 8px;
+    box-sizing: border-box;
+    width: 90%;
+}
+
+/* Impares (1,3,5...) alineados a la izquierda */
+#work-experience li:nth-child(odd) {
+    align-self: flex-start;
+    border: 1px solid rgb(81, 79, 170);
+    box-sizing: border-box;
+}
+
+/* Pares (2,4,6...) alineados a la derecha */
+#work-experience li:nth-child(even) {
+    align-self: flex-end;
+    margin-left: auto;
+    margin-right: 0;
+    box-sizing: border-box;
+}
+#work-experience .ref a {
+    color: rgba(0, 110, 255, 0.616);
+    font-size: 0.875rem;
+    text-decoration: none;
+}
+
+#work-experience .ref a:visited,
+#work-experience .ref a:hover,
+#work-experience .ref a:active,
+#work-experience .ref a:focus {
+    color: rgba(0, 110, 255, 0.616);
+}
