@@ -1,155 +1,313 @@
-* {
-  list-style: none;
-  text-decoration: none;
-}
-
-.row, ul, li, .App-Lateral, div, a {
-  padding: 0 !important;
-  margin: 0 !important;
-}
-
-body {
-  background-color: #f0f2f5;
-  font-family: "Lato", 'Open Sans', sans-serif !important;
-}
-
+/* ========================================
+   App Layout
+   ======================================== */
 .App {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.App-Lateral {
+  padding: 0;
+  margin: 0;
+}
+
+/* ========================================
+   Header
+   ======================================== */
+.App-header {
+  padding: var(--space-8) var(--space-6);
   text-align: center;
+  border-bottom: 1px solid var(--border-subtle);
+  background: linear-gradient(180deg, var(--bg-secondary) 0%, var(--bg-primary) 100%);
 }
 
+.App-header h1 {
+  font-size: var(--font-size-3xl);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  color: var(--text-primary);
+  margin-bottom: var(--space-1);
+}
+
+.App-header .header-role {
+  font-size: var(--font-size-sm);
+  font-weight: 400;
+  color: var(--accent);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  margin-bottom: var(--space-4);
+}
+
+.App-header .header-contact {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-6);
+  font-size: var(--font-size-sm);
+  color: var(--text-secondary);
+}
+
+.App-header .header-contact a {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  color: var(--text-secondary);
+  transition: color var(--transition-fast);
+}
+
+.App-header .header-contact a:hover {
+  color: var(--accent);
+}
+
+.App-header .header-contact a svg {
+  width: 18px;
+  height: 18px;
+}
+
+/* ========================================
+   Section Title
+   ======================================== */
 .App-title {
-  background-color: #222;
-  color: #f0f2f5;
+  font-size: var(--font-size-xl);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  color: var(--text-primary);
+  padding: var(--space-6) var(--space-6) var(--space-3);
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
 }
 
+.App-title::before {
+  content: '';
+  display: inline-block;
+  width: 3px;
+  height: 1.2em;
+  background: var(--accent);
+  border-radius: 2px;
+}
+
+/* ========================================
+   Section Content
+   ======================================== */
 .App-description {
-  background-color: aliceblue;
-  font-size: 1.78rem;
+  padding: 0 var(--space-6) var(--space-8);
+  font-size: var(--font-size-base);
+  color: var(--text-secondary);
+}
+
+.App-description ul {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
 }
 
 .App-description ul li {
-  margin-top: 15px !important;
+  padding: var(--space-4) var(--space-5);
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  transition: border-color var(--transition-base), background var(--transition-base);
 }
 
-.App-description ul li small{
+.App-description ul li:hover {
+  border-color: var(--border-accent);
+  background: var(--bg-elevated);
+}
+
+/* Tags (item-info) */
+.App-description .item-info-c1,
+.App-description .item-info-c2,
+.App-description .item-info-c3 {
+  display: inline-block;
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  color: var(--accent);
+  background: var(--accent-soft);
+  padding: var(--space-1) var(--space-3);
+  border-radius: var(--radius-sm);
+  letter-spacing: -0.01em;
+}
+
+.App-description small {
   display: block;
-  margin-top: 5px !important;
+  margin-top: var(--space-2);
+  font-size: var(--font-size-sm);
+  color: var(--text-muted);
+  line-height: 1.5;
 }
 
-.App-description .item-info-c1{
-  border-radius: 0.5rem;
-  padding: 0.2rem;
-  background-color: #A3BCF9;
+/* Skills section: tighter layout */
+#skills .App-description {
+  font-size: var(--font-size-base);
 }
 
-.App-description .item-info-c2{
-  border-radius: 0.5rem;
-  padding: 0.2rem;
-  background-color: #A3BCF9;
+#skills .App-description small {
+  font-size: var(--font-size-sm);
 }
 
-.App-description .item-info-c3{
-  border-radius: 0.5rem;
-  padding: 0.2rem;
-  background-color: #A3BCF9;
-}
-
-.App-description small{
-  font-size: 1.1rem;
-  vertical-align: top;
-}
-
-.App-domain {
-  text-align: center;
-}
-
+/* ========================================
+   Bottom Navbar
+   ======================================== */
 .App-navbar {
-  color: #f0f2f5;
   position: fixed;
-  bottom: 0px;
-  left: 0px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background: rgba(10, 13, 20, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-top: 1px solid var(--border-subtle);
 }
 
 .menu {
-  background-color: #222;
+  display: flex;
+  background: transparent;
 }
 
-.menu svg {
-  margin: 0.3rem;
-  height: 2rem;
-  width: 2rem;
+.menu .col {
+  padding: 0;
 }
 
 .menu a {
-    color: #f0f2f5;
-}
-
-.menu a:visited,
-.menu a:hover,
-.menu a:active,
-.menu a:focus {
-    color: #f0f2f5;
-}
-
-.link {
-  text-decoration: none;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
+  color: var(--text-muted);
+  font-weight: 500;
+  font-size: var(--font-size-xs);
+  letter-spacing: 0.02em;
 }
 
 .item {
-  background-color: yellowgreen;
-  margin: 0.5rem;
-  list-style: none;
   display: flex;
-  text-align: center;
-  border: 1px solid rgb(187, 207, 146);
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background var(--transition-base);
+  border: none;
+  background: transparent;
+  margin: 0;
 }
 
-a {
-  font-weight: bold !important;
-  text-align: center;
+.item:hover {
+  background: var(--accent-glow);
 }
 
-#skills .App-description{
-  font-size: 1.942rem;
+.item.active {
+  background: var(--accent-soft);
 }
 
-#skills .App-description small{
-  font-size: 1.2rem;
-  vertical-align: 0%;
+.item.active a {
+  color: var(--accent);
 }
 
-
-.cap{
-  overflow: hidden;
+.link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-1);
+  padding: var(--space-3) var(--space-2);
+  width: 100%;
 }
 
-.cap img{
-  height: 40%;
-  max-width: 90%;
+.menu svg {
+  height: 1.25rem;
+  width: 1.25rem;
+  margin: 0;
+  transition: transform var(--transition-fast);
 }
 
+.item:hover svg {
+  transform: translateY(-1px);
+}
+
+/* ========================================
+   Floating Social Buttons
+   ======================================== */
 .SideButtons {
   position: fixed;
-  bottom: 0px;
-  right: 10px;
-  width: 100px;
-  bottom: 100px;
-  color: #222;
-  text-shadow: 1px 1px 10px yellowgreen;
-  font-family: sans-serif;
+  bottom: 80px;
+  right: var(--space-4);
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  z-index: 50;
 }
 
-.button-link{
-  color: black !important;
-  position: relative;
-  text-decoration: none;
-  font-weight: normal !important;
-  font-size: 1rem;
+.button-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-subtle);
+  color: var(--text-secondary);
+  font-weight: 400;
+  font-size: 0;
+  text-shadow: none;
+  transition: all var(--transition-base);
 }
 
-.button-link a{
-  color: inherit;
-  list-style: none;
+.button-link:hover {
+  background: var(--bg-elevated);
+  border-color: var(--border-accent);
+  color: var(--accent);
+  transform: translateY(-2px);
+}
+
+.button-link svg {
+  width: 20px;
+  height: 20px;
+}
+
+/* ========================================
+   Media content (experience images/videos)
+   ======================================== */
+.cap {
+  overflow: hidden;
+  margin-top: var(--space-4);
+  border-radius: var(--radius-sm);
+}
+
+.cap img,
+.cap iframe {
+  border-radius: var(--radius-sm);
+  max-width: 100%;
+}
+
+/* ========================================
+   Main content area padding for fixed navbar
+   ======================================== */
+main {
+  padding-bottom: 80px;
+}
+
+/* ========================================
+   Responsive
+   ======================================== */
+@media (max-width: 767px) {
+  .App-header {
+    padding: var(--space-6) var(--space-4);
+  }
+
+  .App-header .header-contact {
+    flex-direction: column;
+    gap: var(--space-2);
+  }
+
+  .App-title {
+    padding: var(--space-5) var(--space-4) var(--space-2);
+  }
+
+  .App-description {
+    padding: 0 var(--space-4) var(--space-6);
+  }
+
+  .SideButtons {
+    right: var(--space-3);
+    bottom: 72px;
+  }
 }

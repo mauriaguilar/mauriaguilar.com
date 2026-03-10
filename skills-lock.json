@@ -1,6 +1,11 @@
 {
   "version": 1,
   "skills": {
+    "modern-frontend-design": {
+      "source": "deveshpunjabi/modern-frontend-skill",
+      "sourceType": "github",
+      "computedHash": "9e673d3ad89fe557347daabaea034e7df2df026dbc328becbadb66d24408abe9"
+    },
     "react-performance": {
       "source": "pluginagentmarketplace/custom-plugin-react",
       "sourceType": "github",
