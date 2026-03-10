@@ -3,3 +3,55 @@ body {
   padding: 0;
   font-family: sans-serif;
 }
+
+/* ==============================================
+   Bootstrap utility classes (subset used in app)
+   ============================================== */
+
+/* Grid */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.col {
+  flex: 1 0 0%;
+  width: 100%;
+  min-width: 0;
+}
+
+/* Lateral spacer columns: ocultas en mobile, visibles en md/lg */
+.col-md-1,
+.col-lg-2 {
+  display: none;
+  flex: 0 0 auto;
+}
+
+@media (min-width: 768px) {
+  .col-md-1 {
+    display: block;
+    width: 8.333%;
+  }
+}
+
+@media (min-width: 992px) {
+  .col-lg-2 {
+    display: block;
+    width: 16.666%;
+  }
+}
+
+/* Position */
+.position-relative {
+  position: relative;
+}
+
+/* Spacing — !important para pisar el reset de App.css */
+.mt-2 { margin-top: 0.5rem !important; }
+.mb-2 { margin-bottom: 0.5rem !important; }
+.m-2  { margin: 0.5rem !important; }
+.p-4  { padding: 1.5rem !important; }
+
+/* Text & display */
+.text-center { text-align: center; }
+.w-100 { width: 100%; }
