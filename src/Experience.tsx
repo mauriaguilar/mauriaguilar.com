@@ -6,15 +6,15 @@ const Experience = () => {
             company: "Wazuh Inc",
             description: "ReactJs, Python, Flask, AWS: API Gateway, Lambda, Step Functions, Amplify, CloudWatch, S3, Cognito - (2023-present)",
             media: <>
-                <img src="wazuh.png" alt="Wazuh Screenshot" className='mb-2'></img>
-                <img src="wazuh-web.png" alt="Wazuh Web Screenshot"></img>
+                <img src="wazuh.png" alt="Wazuh Screenshot" loading="lazy" className='mb-2'></img>
+                <img src="wazuh-web.png" alt="Wazuh Web Screenshot" loading="lazy"></img>
             </>,
             ref: "https://console.cloud.wazuh.com"
         },
         {
             company: 'Cuentita.com (Personal Project)',
             description: "ReactJs, FastAPI, AWS Lambda, AWS API Gateway, AWS Amplify - (2025-present)",
-            media: <img src="cuentita.gif" alt="Cuentita Screenshot" width={300} height={600}></img>,
+            media: <img src="cuentita.gif" alt="Cuentita Screenshot" width={300} height={600} loading="lazy"></img>,
             ref: "https://cuentita.com"
         },
         {
@@ -46,12 +46,12 @@ const Experience = () => {
         {
             company: "ReactJs Project",
             description: "ReactJs, Firebase - (2021)",
-            media: <img src="tecnoshop.gif" alt="ReactJs Screenshot"></img>
+            media: <img src="tecnoshop.gif" alt="ReactJs Screenshot" loading="lazy"></img>
         },
         {
             company: "Thesis Project",
             description: "Python - (2021)",
-            media: <img src="thesis.png" alt="Thesis Screenshot"></img>
+            media: <img src="thesis.png" alt="Thesis Screenshot" loading="lazy"></img>
         }
     ];
 

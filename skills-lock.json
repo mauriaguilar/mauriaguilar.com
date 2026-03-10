@@ -1,0 +1,15 @@
+{
+  "version": 1,
+  "skills": {
+    "react-performance": {
+      "source": "pluginagentmarketplace/custom-plugin-react",
+      "sourceType": "github",
+      "computedHash": "43d4e91b8c11554c1b5645c32fb27ab457ab900f12d67dfc64f2a7416e9d9364"
+    },
+    "vite-react-best-practices": {
+      "source": "claudiocebpaz/vite-react-best-practices",
+      "sourceType": "github",
+      "computedHash": "c383dacdd55b97e7c36641e7d0ac0c094266ef22458dea31c5000cb3e29e3d49"
+    }
+  }
+}
