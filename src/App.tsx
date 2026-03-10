@@ -1,4 +1,4 @@
-import { useState, useCallback, lazy, Suspense } from 'react';
+import { useState, useCallback, useRef, lazy, Suspense } from 'react';
 import './App.css';
 import Studies from './Studies';
 import Menu from './Menu';
@@ -9,15 +9,47 @@ const Skills = lazy(() => import('./Skills'));
 
 type Section = 'studies' | 'experience' | 'skills';
 
+const SECTIONS: Section[] = ['studies', 'experience', 'skills'];
+const SWIPE_THRESHOLD = 50; // px mínimos para considerar swipe válido
+
 function App() {
   const [activeSection, setActiveSection] = useState<Section>('studies');
+  const touchStartX = useRef<number | null>(null);
 
   const activateStudies = useCallback(() => setActiveSection('studies'), []);
   const activateExperience = useCallback(() => setActiveSection('experience'), []);
   const activateSkills = useCallback(() => setActiveSection('skills'), []);
 
+  const handleTouchStart = useCallback((e: React.TouchEvent) => {
+    touchStartX.current = e.touches[0].clientX;
+  }, []);
+
+  const handleTouchEnd = useCallback((e: React.TouchEvent) => {
+    if (touchStartX.current === null) return;
+
+    const deltaX = e.changedTouches[0].clientX - touchStartX.current;
+    touchStartX.current = null;
+
+    if (Math.abs(deltaX) < SWIPE_THRESHOLD) return;
+
+    setActiveSection(current => {
+      const currentIndex = SECTIONS.indexOf(current);
+      if (deltaX < 0) {
+        // swipe izquierda → sección siguiente
+        return SECTIONS[Math.min(currentIndex + 1, SECTIONS.length - 1)];
+      } else {
+        // swipe derecha → sección anterior
+        return SECTIONS[Math.max(currentIndex - 1, 0)];
+      }
+    });
+  }, []);
+
   return (
-    <div className="App">
+    <div
+      className="App"
+      onTouchStart={handleTouchStart}
+      onTouchEnd={handleTouchEnd}
+    >
 
       <header className="App-header">
         <h1>Mauri Aguilar</h1>
