@@ -13,8 +13,8 @@ const Studies = () => {
                     <small>CoderHouse (07/2021 - 09/2021)</small>
                 </li>
                 <li>
-                    <span className="item-info-c1">English Level 3 & 4</span><br/>
-                    <small>GAPS Academy (2020, 2021, 2022)</small>
+                    <span className="item-info-c1">English Level B1</span><br/>
+                    <small>GAPS Academy (2021, 2022)</small>
                 </li>
                 <li>
                     <span className="item-info-c1">IT Essentials</span><br/>
