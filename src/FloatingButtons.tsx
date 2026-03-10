@@ -1,4 +1,6 @@
-const FloatingButtons = () => {
+import { memo } from 'react';
+
+const FloatingButtons = memo(() => {
     return (
         <>
             <div>
@@ -20,6 +22,6 @@ const FloatingButtons = () => {
             </div>
         </>
     )
-}
+});
 
 export default FloatingButtons;

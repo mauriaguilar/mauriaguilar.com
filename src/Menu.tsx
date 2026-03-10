@@ -1,3 +1,5 @@
+import { memo } from 'react';
+
 interface MenuProps {
   activateStudies: () => void;
   activateExperience: () => void;
@@ -44,4 +46,4 @@ const Menu = ({ activateStudies, activateExperience, activateSkills }: MenuProps
   )
 }
 
-export default Menu
+export default memo(Menu)
