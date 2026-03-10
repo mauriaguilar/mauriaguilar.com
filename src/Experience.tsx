@@ -26,8 +26,8 @@ const experiences = [
         company: "IncluIT for Telecom Personal Mobile & Web Apps",
         description: "Java, HTML, CSS, JQuery - (2020)",
         media: <>
-            <img src="personal-logo.png" alt="Personal Logo" width={150} height={300} className='mb-2' />
-            <img src="personal.png" alt="Telecom App Screenshot" width={300} height={300} />
+            <img src="personal-logo.png" alt="Personal Logo" width={300} height={100} className='mb-2' />
+            <img src="personal.png" alt="Telecom App Screenshot" width={200} height={350} />
         </>,
         ref: "https://www.personal.com.ar"
     },
@@ -35,8 +35,8 @@ const experiences = [
         company: "IncluIT for McAfee Solidcore",
         description: "C, Docker, Git, English meetings - (2020)",
         media: <>
-            <img src="mcafee.png" alt="McAfee Screenshot" width={300} height={200} className='mb-2' />
-            <img src="solidcore.jpg" alt="McAfee Solidcore Screenshot" width={150} height={100} />
+            <img src="mcafee.png" alt="McAfee Screenshot" width={300} height={100} className='mb-2' />
+            <img src="solidcore.jpg" alt="McAfee Solidcore Screenshot" width={150} height={50} />
         </>,
         ref: "https://www.mcafee.com"
     },
