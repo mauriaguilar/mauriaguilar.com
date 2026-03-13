@@ -53,7 +53,7 @@ function App() {
 
       <header className="App-header">
         <h1>Mauri Aguilar</h1>
-        <div className="header-role">Software Engineer</div>
+        <div className="header-role">Senior Backend Engineer</div>
         <div className="header-contact">
           <a href="mailto:aguilarmauri@gmail.com">
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
