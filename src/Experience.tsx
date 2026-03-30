@@ -37,7 +37,7 @@ const experiences = [
             </ul>
         </>,
         media: <iframe width="100%" height="300px" src="https://www.youtube.com/embed/Ru51DELfc-Q" title="New OpenVINO Solution: Edge Insights For Fleet | Edge Innovation Series for Developers" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></iframe>,
-        ref: "https://www.intel.com"
+        ref: "https://www.intel.com/content/www/us/en/docs/edge-insights-fleet/developer-guide/2022-4/reference-implementations.html"
     },
     {
         company: "IncluIT | Telecom Contractor (2019-2020)",
