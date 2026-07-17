@@ -67,24 +67,6 @@ const experiences = [
             <img src="solidcore.jpg" alt="McAfee Solidcore Screenshot" width={150} height={50} />
         </>,
         ref: "https://www.mcafee.com"
-    },
-    {
-        company: "ReactJs Project (2021)",
-        description: <>
-            <ul className="exp-bullets">
-                <li>Final project for the ReactJs course at CoderHouse. E-commerce built with ReactJs and Firebase.</li>
-            </ul>
-        </>,
-        media: <img src="tecnoshop.gif" alt="ReactJs Screenshot" loading="lazy" />
-    },
-    {
-        company: "Thesis Project (2021)",
-        description: <>
-            <ul className="exp-bullets">
-                <li>Developed an obstacle avoidance system in Python on Raspberry Pi for autonomous vehicles.</li>
-            </ul>
-        </>,
-        media: <img src="thesis.png" alt="Thesis Screenshot" loading="lazy" />
     }
 ];
 
