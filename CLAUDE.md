@@ -3,3 +3,5 @@ Es una pagina web personal con 3 secciones principales: Studies, Work Experience
 La idea es que la web sea lo mas estatica, ligera y rapida posible.
 Debe verse professional y minimalista.
 Evitar usar librerias externas de css como boostrap o tailwind para favorecer el peso liviano.
+
+Mi CV: /home/mau/dev/Job/CV/Curriculum_Vitae_es.md
