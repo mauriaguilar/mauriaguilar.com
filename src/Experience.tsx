@@ -2,12 +2,13 @@ import './Experience.css';
 
 const experiences = [
     {
-        company: "Wazuh, Inc. | Software Engineer (Apr 2023-present)",
+        company: "Wazuh, Inc. | Software Engineer (Apr 2023-Mar 2026)",
         description: <>
             <ul className="exp-bullets">
-                <li>Built and maintained 13 REST APIs (Python/Flask, OpenAPI) + 10 Jobs (AWS Lambda) + ReactJs frontend for a cybersecurity SaaS with 500 users.</li>
+                <li>Built and maintained 13 REST APIs (Python/Flask, OpenAPI) + 10 Jobs (AWS Lambda) + ReactJs frontend for a cybersecurity SaaS with 500+ users covering subscriptions, contracts, billing and Stripe integration.</li>
                 <li>Migrated environments API from Flask to FastAPI towards an event-driven design pattern. Designed and built a job scheduler service in Python for automated and event-based task management.</li>
                 <li>Implemented observability and monitoring with AWS CloudWatch, X-Ray and Lambda Insights, with automated Slack alerts and daily metrics review.</li>
+                <li>Developed a security report generation workflow with LLM and prompt engineering (GenAI).</li>
                 <li>Designed and implemented a backoffice system with Appsmith and N8N for the sales team, including discrepancy detection between environments and contracts.</li>
             </ul>
         </>,
@@ -21,7 +22,7 @@ const experiences = [
         company: 'Cuentita.com (Personal Project, 2025-present)',
         description: <>
             <ul className="exp-bullets">
-                <li>Expense management PWA with React + FastAPI, serverless API on AWS (Lambda, DynamoDB, Cognito).</li>
+                <li>Migrated backend from FastAPI to Go, deployed as AWS Lambda functions behind API Gateway with DynamoDB. Frontend built with React Native.</li>
             </ul>
         </>,
         media: <img src="cuentita.gif" alt="Cuentita Screenshot" width={300} height={600} loading="lazy" />,
@@ -31,8 +32,8 @@ const experiences = [
         company: "IncluIT | Intel Contractor (2020-2023)",
         description: <>
             <ul className="exp-bullets">
-                <li>Developed an IoT vehicle fleet monitoring system with Python/Flask, integrating Intel hardware, Machine Learning and AWS (IoT Core, EC2, S3).</li>
-                <li>Implemented real-time monitoring with Thingsboard for metrics visualization and vehicle location on map.</li>
+                <li>Developed an IoT vehicle fleet monitoring system with Python/Flask: ML models running on the edge (Intel hardware), telemetry sent via MQTT to AWS (IoT Core, EC2, S3) and data flowing between microservices in real time.</li>
+                <li>Implemented real-time monitoring with ThingsBoard and observability with Kibana and DynamoDB for metrics visualization and vehicle location on map.</li>
                 <li>Co-led the project and participated in hiring and training 2 junior developers.</li>
             </ul>
         </>,
@@ -80,7 +81,7 @@ const experiences = [
         company: "Thesis Project (2021)",
         description: <>
             <ul className="exp-bullets">
-                <li>Desarrollé un sistema de evasión de obstáculos en Python sobre Raspberry Pi para vehículos autónomos.</li>
+                <li>Developed an obstacle avoidance system in Python on Raspberry Pi for autonomous vehicles.</li>
             </ul>
         </>,
         media: <img src="thesis.png" alt="Thesis Screenshot" loading="lazy" />
