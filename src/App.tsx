@@ -1,55 +1,69 @@
-import { useState, useCallback, useRef, lazy, Suspense } from 'react';
+import { useState, useCallback, useEffect, useRef } from 'react';
 import './App.css';
 import Studies from './Studies';
 import Menu from './Menu';
 import FloatingButtons from './FloatingButtons';
+import Experience from './Experience';
+import Skills from './Skills';
 
-const Experience = lazy(() => import('./Experience'));
-const Skills = lazy(() => import('./Skills'));
+type Section = 'experience' | 'skills' | 'studies';
 
-type Section = 'studies' | 'experience' | 'skills';
-
-const SECTIONS: Section[] = ['studies', 'experience', 'skills'];
-const SWIPE_THRESHOLD = 50; // px mínimos para considerar swipe válido
+const SECTIONS: Section[] = ['experience', 'skills', 'studies'];
 
 function App() {
-  const [activeSection, setActiveSection] = useState<Section>('studies');
-  const touchStartX = useRef<number | null>(null);
+  const [activeSection, setActiveSection] = useState<Section>('experience');
+  const sectionRefs = useRef<Record<Section, HTMLElement | null>>({
+    experience: null,
+    skills: null,
+    studies: null,
+  });
+  const isClickScrolling = useRef(false);
 
-  const activateStudies = useCallback(() => setActiveSection('studies'), []);
-  const activateExperience = useCallback(() => setActiveSection('experience'), []);
-  const activateSkills = useCallback(() => setActiveSection('skills'), []);
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (isClickScrolling.current) return;
 
-  const handleTouchStart = useCallback((e: React.TouchEvent) => {
-    touchStartX.current = e.touches[0].clientX;
-  }, []);
+        const visible = entries
+          .filter(entry => entry.isIntersecting)
+          .sort((a, b) => b.intersectionRatio - a.intersectionRatio);
 
-  const handleTouchEnd = useCallback((e: React.TouchEvent) => {
-    if (touchStartX.current === null) return;
+        if (visible.length > 0) {
+          const id = visible[0].target.id as Section;
+          setActiveSection(id);
+        }
+      },
+      { rootMargin: '-40% 0px -50% 0px', threshold: [0, 0.25, 0.5, 0.75, 1] }
+    );
 
-    const deltaX = e.changedTouches[0].clientX - touchStartX.current;
-    touchStartX.current = null;
-
-    if (Math.abs(deltaX) < SWIPE_THRESHOLD) return;
-
-    setActiveSection(current => {
-      const currentIndex = SECTIONS.indexOf(current);
-      if (deltaX < 0) {
-        // swipe izquierda → sección siguiente
-        return SECTIONS[Math.min(currentIndex + 1, SECTIONS.length - 1)];
-      } else {
-        // swipe derecha → sección anterior
-        return SECTIONS[Math.max(currentIndex - 1, 0)];
-      }
+    SECTIONS.forEach(section => {
+      const el = sectionRefs.current[section];
+      if (el) observer.observe(el);
     });
+
+    return () => observer.disconnect();
   }, []);
+
+  const scrollToSection = useCallback((section: Section) => {
+    const el = sectionRefs.current[section];
+    if (!el) return;
+
+    isClickScrolling.current = true;
+    setActiveSection(section);
+    el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+    window.clearTimeout((scrollToSection as unknown as { _t?: number })._t);
+    (scrollToSection as unknown as { _t?: number })._t = window.setTimeout(() => {
+      isClickScrolling.current = false;
+    }, 700);
+  }, []);
+
+  const activateExperience = useCallback(() => scrollToSection('experience'), [scrollToSection]);
+  const activateSkills = useCallback(() => scrollToSection('skills'), [scrollToSection]);
+  const activateStudies = useCallback(() => scrollToSection('studies'), [scrollToSection]);
 
   return (
-    <div
-      className="App"
-      onTouchStart={handleTouchStart}
-      onTouchEnd={handleTouchEnd}
-    >
+    <div className="App">
 
       <header className="App-header">
         <h1>Mauri Aguilar</h1>
@@ -68,23 +82,15 @@ function App() {
       <div className='row'>
         <div className='col-xs-0 col-md-1 col-lg-2 App-Lateral'></div>
         <main className="col">
-          <Suspense fallback={null}>
-            {activeSection === 'studies' && (
-              <div id="studies">
-                <Studies/>
-              </div>
-            )}
-            {activeSection === 'experience' && (
-              <div id="experience">
-                <Experience/>
-              </div>
-            )}
-            {activeSection === 'skills' && (
-              <div id="skills">
-                <Skills/>
-              </div>
-            )}
-          </Suspense>
+          <section id="experience" ref={(el) => { sectionRefs.current.experience = el; }}>
+            <Experience/>
+          </section>
+          <section id="skills" ref={(el) => { sectionRefs.current.skills = el; }}>
+            <Skills/>
+          </section>
+          <section id="studies" ref={(el) => { sectionRefs.current.studies = el; }}>
+            <Studies/>
+          </section>
         </main>
         <div className='col-xs-0 col-md-1 col-lg-2 App-Lateral'></div>
       </div>
@@ -95,9 +101,9 @@ function App() {
           <div className='col'>
             <Menu
               activeSection={activeSection}
-              activateStudies={activateStudies}
               activateExperience={activateExperience}
               activateSkills={activateSkills}
+              activateStudies={activateStudies}
             />
           </div>
           <div className='col-xs-0 col-md-1 col-lg-2 App-Lateral'></div>
