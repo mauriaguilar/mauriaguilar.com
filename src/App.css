@@ -16,15 +16,44 @@
    Header
    ======================================== */
 .App-header {
+  position: relative;
+  overflow: hidden;
   padding: var(--space-8) var(--space-6);
   text-align: center;
   border-bottom: 1px solid var(--border-subtle);
-  background:
-    linear-gradient(180deg, rgba(17, 24, 39, 0.9) 0%, rgba(10, 13, 20, 0.96) 100%),
-    url('/linkedin-banner.svg');
-  background-size: cover;
-  background-position: center;
+  background: linear-gradient(180deg, var(--bg-secondary) 0%, var(--bg-primary) 100%);
+}
+
+/* Decorative network graphic — mirrored on both edges so the visual
+   weight (baked into the right half of the source asset) stays balanced
+   around the centered header text. */
+.App-header::before,
+.App-header::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 55%;
+  z-index: 0;
+  background-image: url('/linkedin-banner.svg');
   background-repeat: no-repeat;
+  background-size: auto 160%;
+  background-position: right center;
+  opacity: 0.55;
+}
+
+.App-header::after {
+  right: 0;
+}
+
+.App-header::before {
+  left: 0;
+  transform: scaleX(-1);
+}
+
+.App-header > * {
+  position: relative;
+  z-index: 1;
 }
 
 .App-header h1 {
