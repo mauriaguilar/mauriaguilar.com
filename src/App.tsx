@@ -5,6 +5,7 @@ import Menu from './Menu';
 import FloatingButtons from './FloatingButtons';
 import Experience from './Experience';
 import Skills from './Skills';
+import WorkedWith from './WorkedWith';
 
 type Section = 'experience' | 'skills' | 'studies';
 
@@ -88,6 +89,8 @@ function App() {
           <a href="https://mauriaguilar.com">mauriaguilar.com</a>
         </div>
       </header>
+
+      <WorkedWith />
 
       <div className='row'>
         <div className='col-xs-0 col-md-1 col-lg-2 App-Lateral'></div>
