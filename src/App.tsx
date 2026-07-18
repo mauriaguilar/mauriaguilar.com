@@ -68,6 +68,16 @@ function App() {
       <header className="App-header">
         <h1>Mauri Aguilar</h1>
         <div className="header-role">Senior Backend Engineer</div>
+        <p className="header-pitch">
+          +7 años construyendo microservicios en Go y Python sobre AWS para SaaS de ciberseguridad y telecomunicaciones.
+        </p>
+        <ul className="header-stats">
+          <li><span className="stat-value">+7</span><span className="stat-label">años</span></li>
+          <li><span className="stat-value">500+</span><span className="stat-label">usuarios</span></li>
+          <li><span className="stat-value">11K</span><span className="stat-label">concurrentes</span></li>
+          <li><span className="stat-value">13</span><span className="stat-label">APIs</span></li>
+          <li><span className="stat-value">AWS</span><span className="stat-label">cloud</span></li>
+        </ul>
         <div className="header-contact">
           <a href="mailto:aguilarmauri@gmail.com">
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
