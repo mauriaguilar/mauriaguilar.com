@@ -2,7 +2,9 @@ import './Experience.css';
 
 const experiences = [
     {
-        company: "Wazuh, Inc. | Software Engineer (Apr 2023-Mar 2026)",
+        company: "Wazuh, Inc.",
+        role: "Software Engineer",
+        date: "Apr 2023 – Mar 2026",
         description: <>
             <ul className="exp-bullets">
                 <li>Built and maintained 13 REST APIs (Python/Flask, OpenAPI) + 10 Jobs (AWS Lambda) + ReactJs frontend for a cybersecurity SaaS with 500+ users covering subscriptions, contracts, billing and Stripe integration.</li>
@@ -19,7 +21,9 @@ const experiences = [
         ref: "https://console.cloud.wazuh.com"
     },
     {
-        company: 'Cuentita.com (Personal Project, 2025-present)',
+        company: 'Cuentita.com',
+        role: "Personal Project",
+        date: "2025 – Present",
         description: <>
             <ul className="exp-bullets">
                 <li>Migrated backend from FastAPI to Go, deployed as AWS Lambda functions behind API Gateway with DynamoDB. Frontend built with React Native.</li>
@@ -29,7 +33,9 @@ const experiences = [
         ref: "https://cuentita.com"
     },
     {
-        company: "IncluIT | Intel Contractor (2020-2023)",
+        company: "IncluIT",
+        role: "Intel Contractor",
+        date: "2020 – 2023",
         description: <>
             <ul className="exp-bullets">
                 <li>Developed an IoT vehicle fleet monitoring system with Python/Flask: ML models running on the edge (Intel hardware), telemetry sent via MQTT to AWS (IoT Core, EC2, S3) and data flowing between microservices in real time.</li>
@@ -41,7 +47,9 @@ const experiences = [
         ref: "https://www.intel.com/content/www/us/en/docs/edge-insights-fleet/developer-guide/2022-4/reference-implementations.html"
     },
     {
-        company: "IncluIT | Telecom Contractor (2019-2020)",
+        company: "IncluIT",
+        role: "Telecom Contractor",
+        date: "2019 – 2020",
         description: <>
             <ul className="exp-bullets">
                 <li>Developed frontend and backend features for Telecom Personal's mobile (Java Spring) and web applications, handling peaks of up to 11000 concurrent users.</li>
@@ -55,7 +63,9 @@ const experiences = [
         ref: "https://www.personal.com.ar"
     },
     {
-        company: "IncluIT | McAfee Solidcore (2019-2020)",
+        company: "IncluIT",
+        role: "McAfee Solidcore",
+        date: "2019 – 2020",
         description: <>
             <ul className="exp-bullets">
                 <li>Bug fixing and automated testing (PyTest, Docker) on a cybersecurity product, with CI/CD on GitLab CI.</li>
@@ -78,7 +88,13 @@ const Experience = () => {
         <ul id="work-experience">
           {experiences.map((exp, index) => (
             <li key={index}>
-              <span className="item-info-c2">{exp.company}</span>
+              <div className="exp-header">
+                <div className="exp-heading">
+                  <span className="exp-company">{exp.company}</span>
+                  <span className="exp-role">{exp.role}</span>
+                </div>
+                <span className="exp-date">{exp.date}</span>
+              </div>
               <div className="exp-description">{exp.description}</div>
               <div className='cap'>
                 {exp.media}

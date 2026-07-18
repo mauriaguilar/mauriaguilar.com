@@ -3,6 +3,7 @@ import './Studies.css';
 
 type StudyModal = {
   title: string;
+  date: string;
   description: ReactNode;
   media: ReactNode;
   ref?: string;
@@ -10,7 +11,8 @@ type StudyModal = {
 
 const modals: Record<string, StudyModal> = {
   thesis: {
-    title: 'Thesis Project (2021)',
+    title: 'Thesis Project',
+    date: '2021',
     description: (
       <ul className="exp-bullets">
         <li>Developed an obstacle avoidance system in Python on Raspberry Pi for autonomous vehicles.</li>
@@ -19,7 +21,8 @@ const modals: Record<string, StudyModal> = {
     media: <img src="thesis.png" alt="Thesis Screenshot" loading="lazy" />,
   },
   reactjs: {
-    title: 'ReactJs Project (2021)',
+    title: 'ReactJs Project',
+    date: '2021',
     description: (
       <ul className="exp-bullets">
         <li>Final project for the ReactJs course at CoderHouse. E-commerce built with ReactJs and Firebase.</li>
@@ -60,8 +63,11 @@ const Studies = () => {
           aria-haspopup="dialog"
         >
           <div className='study-trigger-body'>
-            <span className="item-info-c1">Computer Engineer</span>
-            <small>Universidad Nacional de Córdoba (2008 - 2022)</small>
+            <div className='study-heading'>
+              <span className="study-title">Computer Engineer</span>
+              <span className="study-date">2008 – 2022</span>
+            </div>
+            <small>Universidad Nacional de Córdoba</small>
           </div>
           <span className='study-arrow' aria-hidden="true"><ArrowIcon /></span>
         </button>
@@ -69,8 +75,32 @@ const Studies = () => {
         <div className='study-group'>
           <ul>
             <li>
-              <span className="item-info-c1">Python Advanced</span>
-              <small>LinkedIn Learning (2023)</small>
+              <div className='study-heading'>
+                <span className="study-title">Become a Better Engineer by Understanding Product Management</span>
+                <span className="study-date">2026</span>
+              </div>
+              <small>Udemy</small>
+            </li>
+            <li>
+              <div className='study-heading'>
+                <span className="study-title">Development with AI</span>
+                <span className="study-date">2026</span>
+              </div>
+              <small>BIG School</small>
+            </li>
+            <li>
+              <div className='study-heading'>
+                <span className="study-title">Python Advanced</span>
+                <span className="study-date">2023</span>
+              </div>
+              <small>LinkedIn Learning</small>
+            </li>
+            <li>
+              <div className='study-heading'>
+                <span className="study-title">AWS Practitioner</span>
+                <span className="study-date">2022</span>
+              </div>
+              <small>ISPC</small>
             </li>
             <li>
               <button
@@ -80,27 +110,21 @@ const Studies = () => {
                 aria-haspopup="dialog"
               >
                 <div className='study-trigger-body'>
-                  <span className="item-info-c1">ReactJS</span>
-                  <small>CoderHouse (07/2021 - 09/2021)</small>
+                  <div className='study-heading'>
+                    <span className="study-title">ReactJS</span>
+                    <span className="study-date">Jul 2021 – Sep 2021</span>
+                  </div>
+                  <small>CoderHouse</small>
                 </div>
                 <span className='study-arrow' aria-hidden="true"><ArrowIcon /></span>
               </button>
             </li>
             <li>
-              <span className="item-info-c1">Become a Better Engineer by Understanding Product Management</span>
-              <small>Udemy (2026)</small>
-            </li>
-            <li>
-              <span className="item-info-c1">Development with AI</span>
-              <small>BIG School (2026)</small>
-            </li>
-            <li>
-              <span className="item-info-c1">AWS Practitioner</span>
-              <small>ISPC (2022)</small>
-            </li>
-            <li>
-              <span className="item-info-c1">English Level B1</span>
-              <small>GAPS Academy (2021, 2022)</small>
+              <div className='study-heading'>
+                <span className="study-title">English Level B1</span>
+                <span className="study-date">2021 – 2022</span>
+              </div>
+              <small>GAPS Academy</small>
             </li>
           </ul>
         </div>
@@ -123,7 +147,10 @@ const Studies = () => {
             >
               &times;
             </button>
-            <span className="item-info-c2">{modal.title}</span>
+            <div className='study-heading'>
+              <span className="study-title">{modal.title}</span>
+              <span className="study-date">{modal.date}</span>
+            </div>
             <div className='exp-description'>{modal.description}</div>
             <div className='cap'>{modal.media}</div>
             {modal.ref && (

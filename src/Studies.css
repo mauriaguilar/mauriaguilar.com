@@ -22,6 +22,28 @@
   min-width: 0;
 }
 
+/* Title / date hierarchy (shared by list items, triggers and modal) */
+.study-heading {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--space-3);
+}
+
+.study-title {
+  font-size: var(--font-size-base);
+  font-weight: 600;
+  color: var(--text-primary);
+  letter-spacing: -0.01em;
+}
+
+.study-date {
+  flex-shrink: 0;
+  font-size: var(--font-size-sm);
+  color: var(--text-muted);
+  white-space: nowrap;
+}
+
 /* Circular right-arrow shown on cards that open a modal */
 .study-arrow {
   flex-shrink: 0;
@@ -102,15 +124,12 @@
   border-color: var(--border-accent);
 }
 
-.study-modal .item-info-c2 {
-  display: inline-block;
-  font-size: var(--font-size-sm);
-  font-weight: 600;
-  color: var(--accent);
-  background: var(--accent-soft);
-  padding: var(--space-1) var(--space-3);
-  border-radius: var(--radius-sm);
+.study-modal .study-heading {
   margin-right: var(--space-8);
+}
+
+.study-modal .study-title {
+  font-size: var(--font-size-lg);
 }
 
 @keyframes study-fade-in {

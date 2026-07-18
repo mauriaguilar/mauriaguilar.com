@@ -172,9 +172,7 @@ main section + section {
   background: var(--bg-elevated);
 }
 
-/* Tags (item-info) */
-.App-description .item-info-c1,
-.App-description .item-info-c2,
+/* Category pill — reserved for Skills categories only */
 .App-description .item-info-c3 {
   display: inline-block;
   font-size: var(--font-size-sm);
@@ -215,8 +213,8 @@ main section + section {
   background: var(--accent);
 }
 
-.App-description .study-featured .item-info-c1 {
-  font-size: var(--font-size-base);
+.App-description .study-featured .study-title {
+  font-size: var(--font-size-lg);
 }
 
 /* Studies section grouping */
@@ -237,10 +235,6 @@ main section + section {
 /* Skills section: tighter layout */
 #skills .App-description {
   font-size: var(--font-size-base);
-}
-
-#skills .App-description small {
-  font-size: var(--font-size-sm);
 }
 
 /* ========================================

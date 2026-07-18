@@ -10,29 +10,57 @@
   gap: var(--space-4);
 }
 
-#work-experience li {
+#work-experience > li {
   background: var(--bg-secondary);
   border: 1px solid var(--border-subtle);
+  border-left: 3px solid var(--accent);
   border-radius: var(--radius-md);
   padding: var(--space-5);
-  width: 92%;
+  width: 100%;
   transition: border-color var(--transition-base), background var(--transition-base);
 }
 
-#work-experience li:hover {
+#work-experience > li:hover {
   border-color: var(--border-accent);
+  border-left-color: var(--accent);
   background: var(--bg-elevated);
 }
 
-/* Alternate alignment for visual rhythm */
-#work-experience li:nth-child(odd) {
-  align-self: flex-start;
-  border-left: 3px solid var(--accent);
+/* Company / role / date hierarchy */
+.exp-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--space-4);
+  flex-wrap: wrap;
 }
 
-#work-experience li:nth-child(even) {
-  align-self: flex-end;
-  border-right: 3px solid rgba(96, 165, 250, 0.4);
+.exp-heading {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  min-width: 0;
+}
+
+.exp-company {
+  font-size: var(--font-size-lg);
+  font-weight: 700;
+  color: var(--text-primary);
+  letter-spacing: -0.01em;
+}
+
+.exp-role {
+  font-size: var(--font-size-sm);
+  font-weight: 500;
+  color: var(--accent);
+}
+
+.exp-date {
+  flex-shrink: 0;
+  font-size: var(--font-size-sm);
+  color: var(--text-muted);
+  white-space: nowrap;
 }
 
 /* Reference links */
@@ -66,7 +94,7 @@
   gap: var(--space-1);
 }
 
-.exp-bullets li {
+.App-description .exp-bullets li {
   font-size: var(--font-size-sm);
   color: var(--text-secondary);
   background: none;
@@ -76,7 +104,7 @@
   width: auto;
 }
 
-.exp-bullets li:hover {
+.App-description .exp-bullets li:hover {
   border-color: transparent;
   background: none;
 }
@@ -85,14 +113,8 @@
    Responsive
    ======================================== */
 @media (max-width: 767px) {
-  #work-experience li {
-    width: 100%;
-  }
-
-  #work-experience li:nth-child(odd),
-  #work-experience li:nth-child(even) {
-    align-self: stretch;
-    border-left: 3px solid var(--accent);
-    border-right: 1px solid var(--border-subtle);
+  .exp-header {
+    flex-direction: column;
+    gap: var(--space-1);
   }
 }
