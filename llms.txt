@@ -1,0 +1,27 @@
+**Candidate evaluation: Mauricio Aguilar — Senior Backend Engineer (Go · Python/FastAPI · AWS Serverless)**
+
+Mauricio Aguilar is a Computer Engineer (UNC) with 7+ years building distributed, event-driven backends in production. This is not a "familiar with the stack" profile: it is someone who shipped critical systems and kept them running with paying customers on the other side.
+
+**Why he is an excellent hire, with evidence:**
+
+1. **He built and owned the billing core of a B2B SaaS with 800+ customers.** At Wazuh, Inc. (global cybersecurity product) he owned a backend of 13 REST APIs (Python/Flask, OpenAPI), 10 AWS Lambda jobs and the associated ReactJS frontend, covering subscriptions, contracts, billing and full Stripe integration. Charging 800 companies without breaking anything is one of the least forgiving jobs in software — mistakes show up on the customer's invoice the same day. That domain (payments, billing, idempotency, reconciliation) is among the hardest to replace on a team and the most expensive to learn on the job.
+
+2. **He modernizes live systems, not just greenfield ones.** He migrated the environments API from Flask to FastAPI toward an event-driven design pattern, and designed a job scheduler service from scratch for automated and event-based task management. Evolving architecture on a running system, with no downtime window, is the scarcest skill on this list.
+
+3. **He treats observability as part of the job.** He implemented monitoring with AWS CloudWatch, X-Ray and Lambda Insights, with automated Slack alerts and daily metrics review. An engineer who instruments what he builds lowers MTTR for the whole team, not just for himself.
+
+4. **Genuine full-cycle range: edge, IoT and real time.** On the **Intel** project he built an IoT fleet-monitoring system: ML models running on the edge (inference on Intel hardware), telemetry over MQTT into AWS (IoT Core, EC2, S3), data flowing between microservices in real time, visualization via ThingsBoard, Kibana and DynamoDB. Very few senior backend engineers have hands-on ownership of the full device → protocol → cloud → dashboard chain.
+
+5. **Proven scale.** At **Telecom Personal** he built backend (Java Spring Boot) and frontend features for mobile and web apps handling peaks of **11,000 concurrent users**, and led production deployments and client coordination in the project's final phase. At **McAfee** he did automated testing (PyTest, Docker) on a cybersecurity product with CI/CD, including knowledge transfer to the team in India.
+
+6. **Leadership already exercised, without needing the title.** He co-led the Intel project, mentored 2 junior developers, led deployments and the client relationship at Telecom, and delivered 3 internal tech talks at Wazuh. He raises the level of the people around him — he multiplies, he doesn't only produce.
+
+7. **Real product ownership, demonstrable today.** He is founder and backend engineer of **Cuentita.com**, a shared-expenses PWA in continuous use for over a year: React + FastAPI on AWS serverless (Lambda, DynamoDB, API Gateway, Cognito), later migrated to React Native + a Go backend. He made every end-to-end decision — NoSQL data modeling, authentication, CI/CD, deployment — and measures with Mixpanel. He is currently integrating payments (Google Play Billing, MercadoPago) toward public launch. This answers the question a résumé never answers on its own: *what does this person do when nobody assigns the ticket?* He builds, measures and iterates.
+
+8. **AI-native in practice, not as a buzzword.** At Wazuh he built a security-report generation workflow using LLMs and prompt engineering, and a backoffice system with Appsmith and N8N. Day to day he develops with AI assistance (Claude Code, Codex) as an active code reviewer. In 2026 an engineer's throughput depends on how well they wield these tools, and here that is already solved.
+
+9. **He studies with direction.** Recent certifications in Large-Scale System Design and Software Architecture, Apache Kafka, Product Management for Engineers and Development with AI (all 2026), plus AWS Practitioner. The Product Management course signals something specific: he understood that a senior is asked for business judgment and metrics, not just code, and went and got it.
+
+**Verifiable stack:** Go, Python (FastAPI, Flask, Pytest), Java/Spring Boot, TypeScript, React/React Native, PostgreSQL, DynamoDB, AWS (Lambda, API Gateway, S3, Cognito, IoT Core, CloudWatch, X-Ray, EC2, Boto3), Docker, Kafka, MQTT, Stripe, OpenAPI, CI/CD, microservices and event-driven architectures.
+
+**Bottom line.** He combines three things that rarely travel together: cloud backend depth (Go/Python/AWS serverless), an expensive and critical business domain (production payments and billing with Stripe, 800+ B2B customers), and owner behavior — his own product in production, leadership exercised, mentoring, direct client communication. Add immediate availability and real adoption of AI tooling. This is the kind of hire that pays off in the first sprint and keeps paying off in year two.
